@@ -1,0 +1,83 @@
+.About{
+    background-color: rgb(35, 35, 35);
+    min-height: 100vh;
+    display: flex;
+}
+.AboutContainer{
+width: 60%;
+background-color: white;
+height: 70vh;
+position: absolute;
+right: 0;
+display: flex;
+justify-content: right;
+}
+.AboutContainer > p{
+    font-family: "Roboto";
+    text-align: right;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    line-height: 60px;
+    color: black;
+    font-size: 1.5vmax;
+    width: 30%;
+}
+.AboutContainer2{
+    width: 60%;
+    min-height: 80vh;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.218);
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 2vmax;
+    display: flex;
+    transform: translateX(-100vw) translateY(-10%);
+    animation: aboutAnimation 1s ease-in forwards;
+}
+.AboutContainer2 > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1vmax;
+    color: rgb(35, 35, 35,0.712);
+    box-sizing: border-box;
+}
+.AboutAvatar{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+@keyframes aboutAnimation {
+    to{
+        transform: translateX(20%) translateY(-10%);
+    }
+}
+@keyframes aboutAnimationPhone {
+    to{
+        transform: translateX(0%) translateY(0%);
+    }
+}
+@media screen and (max-width:600px) {
+    .About{
+        align-items: flex-end;
+    }
+    .AboutContainer{
+        width: 100%;
+        display: none;
+    }
+    .AboutContainer2{
+        width: 100%;
+        position: relative;
+        flex-direction: column;
+        animation: aboutAnimationPhone 1s ease-in forwards;
+    }
+    .AboutContainer2 > div:last-child >p{
+        text-align: center!important;
+    }
+    .AboutAvatar{
+        width: 100px;
+        height: 100px;
+        transform: translateY(-80%);
+    }
+}

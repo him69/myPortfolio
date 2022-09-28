@@ -1,0 +1,56 @@
+.Footer{
+    background-color: #323232;
+    padding: 3vmax;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+.Footer > div > h5{
+    color: white;
+    width: 120px;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    padding: 10px 0px ;
+
+}
+.Footer >div > p{
+    color: white;
+    width: 60%;
+}
+.Footer > div > h6{
+    color: white;
+    padding: 10px 0px ;
+}
+.Footer > div > a{
+    font-size: 3vmax;
+    color: white;
+    transition: all 0.3s;
+}
+.Footer >div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Footer > div > a:hover{
+    color: rgb(244, 31, 84);
+}
+.footerContactBtn{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    margin: 2vmax 0;
+    border: 1px solid white;
+    transition: all 0.5s;
+    display: block;
+}
+.footerContactBtn > p{
+color: black;
+}
+.footerContactBtn:hover{
+    background-color: unset;
+}
+.footerContactBtn:hover p{
+    color:rgb(244, 31, 84) ;
+}

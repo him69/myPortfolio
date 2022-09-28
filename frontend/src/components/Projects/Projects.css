@@ -1,0 +1,119 @@
+.Projects{
+    background-color: rgb(35, 35, 35);
+    min-height: 100vh;
+    padding-top: 15vmax;
+}
+.Projects > h3{
+    text-align: center;
+    color: white;
+    position: absolute;
+    background-color: cadetblue;
+    padding: 2vmax 4vmax;
+    display: flex;
+    border-radius: 100px;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%,-100vh);
+    animation: ProjectHeadingAnimation 1s ease-in-out forwards;
+}
+@keyframes ProjectHeadingAnimation {
+    to{
+        transform: translate(-50%,-50%);
+    }
+}
+.Projects >h3 >svg{
+    margin: 1vmax;
+}
+.ProjectsWrapper{
+    border-top: 100px solid white;
+    border-radius: 300px 300px 0 0;
+    min-height: inherit;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vmax;
+    padding-bottom: 10vmax;
+    overflow-x: hidden;
+}
+.ProjectsCard{
+    width: 80%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.712);
+    margin: 2vmax;
+    border-radius: 10px;
+    display: flex;
+    transform: translateX(-100vw);
+    animation: ProjectCardAnimation 1s ease-in-out forwards 0.5s;
+}
+.ProjectsCard >div > img{
+    width: inherit ;
+}
+.ProjectsCard:nth-child(even){
+    flex-direction: row-reverse;
+    transform: translateX(100vw);
+    animation: ProjectCardAnimation 1s ease-in-out forwards 0.5s;
+}
+
+@keyframes ProjectCardAnimation {
+    to{
+        transform: translateX(0);
+    }
+}
+.ProjectsCard > div{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+    justify-content: space-around;
+}
+.ProjectsCard > div:first-child::after{
+    content: "VIEW DEMO";
+    width: 100%;
+    height: 100%;
+    font: 100 2rem "Roboto";
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: cadetblue;
+    color: white;
+}
+.ProjectsCard >div:first-child >h5{
+    text-align: center;
+    padding: 2vmax;
+}
+.ProjectsCard  >div:last-child{
+    padding: 3vmax;
+}
+.ProjectsCard  > div:last-child > h4{
+    text-align: center;
+}
+.ProjectsCard  > div:last-child > p{
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-align: right;
+}
+.ProjectsCard  > div:last-child > h6{
+    font-family: "Ubantu Mono";
+    font-weight: bold;
+    color: balck;
+}
+@media screen and (max-width:600px) {
+    .ProjectsCard {
+        flex-direction: column;
+    }
+    .ProjectsCard > div{
+        justify-content: center;
+    }
+    .ProjectsCard >div:last-child >p{
+        text-align: center;
+    }
+    .ProjectsCard:nth-child(even){
+        flex-direction: column;
+        transform: translateX(100vw);
+        animation: ProjectCardAnimation 1s ease-in-out forwards 0.5s;
+    }
+}
